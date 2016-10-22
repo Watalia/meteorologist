@@ -17,7 +17,7 @@ class GeocodingController < ApplicationController
     #   characters removed, is in the variable @street_address_without_spaces.
     # ==========================================================================
 
-    url ="http://maps.googleapis.com/maps/api/geocode/json?address="+@street_address_without_spaces
+    url ="http://maps.googleapis.com/maps/api/geocode/json?address="+street_address_without_spaces
 
     parsed_data = JSON.parse(open(url).read)
 
